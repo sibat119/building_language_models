@@ -1,0 +1,9 @@
+datasets
+ipython
+numpy
+pandas
+tokenizers
+torch
+tqdm
+transformers # use this to support models besides codegen
+argcomplete

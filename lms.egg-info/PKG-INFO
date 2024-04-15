@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: lms
+Version: 0.0.1
+Requires-Dist: datasets
+Requires-Dist: ipython
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: tokenizers
+Requires-Dist: torch
+Requires-Dist: tqdm
+Requires-Dist: transformers
+Requires-Dist: argcomplete
