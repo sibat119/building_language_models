@@ -2,7 +2,3 @@ __pycache__
 *.egg-info/
 data/cache/
 files/temp/*
-data/test/
-data/generated_yaml/
-logs/
-data/benchmark_results/
