@@ -1,10 +1,6 @@
 import json
 import logging
-import os
 from . import files
-import paramiko
-from scp import SCPClient
-import csv
 
 def get_log_files(config):
     files.create_path(files.get_project_root() + "/logs")
@@ -47,12 +43,3 @@ def log_rows(file_path, data: list):
     with open(file_path, mode='a', newline='', encoding='utf-8') as f:
         list_string = ", ".join(data)
         f.write(list_string + '\n')
-
-def scp_file(local_path, remote_path, hostname, username, password="BDI_Lab!"):
-    """ Copy a file to a remote server using SCP """
-    ssh = paramiko.SSHClient()
-    ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-    ssh.connect(hostname, username=username, password=password)
-
-    with SCPClient(ssh.get_transport()) as scp:
-        scp.put(local_path, remote_path)
